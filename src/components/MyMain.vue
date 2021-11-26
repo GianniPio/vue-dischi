@@ -1,14 +1,20 @@
 <template>
   <main>
       <div id="container">
-
+        <MyDiscs/>
       </div>
   </main>
 </template>
 
 <script>
+
+import MyDiscs from "@/components/MyDiscs.vue";
+
 export default {
   name: "MyMain",
+  components: {
+    MyDiscs
+  }
 };
 </script>
 
