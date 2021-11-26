@@ -1,19 +1,37 @@
 <template>
   <main>
-      <div id="container">
-        <MyDiscs/>
-      </div>
+
+    <div id="container">
+      <MyDiscs v-for="disco, i in listadischi" :key="i" :details="disco"/>
+      
+    </div>
+      
   </main>
 </template>
 
 <script>
 
 import MyDiscs from "@/components/MyDiscs.vue";
+import axios from "axios";
 
 export default {
   name: "MyMain",
   components: {
     MyDiscs
+  },
+  data() {
+    return {
+      apiURL: "https://flynn.boolean.careers/exercises/api/array/music",
+      listadischi: [],
+    }
+  },
+  created() {
+    this.getDischi();
+  },
+  methods: {
+    getDischi() {
+      axios.get(this.apiURL).then((result) => {this.listadischi = result.data.response;})
+    }
   }
 };
 </script>
@@ -23,13 +41,15 @@ export default {
 
     main {
         background-color: #1e2d3b;
-        height: auto;
+        height: 100%;
 
         #container {
-            width: 70%;
-            margin: 0 auto;
-            padding: 20px 0;
-            border: 1px solid white;
+          width: 70%;
+          margin: 0 auto;
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
         }
     }
 
