@@ -1,7 +1,8 @@
 <template>
   <div id="header">
+      <!-- div si riferimento per l'icona -->
     <div id="icon">
-        <i class="fab fa-spotify"></i>
+        <i class="fab fa-spotify"></i> <!--Icona di spotify-->
     </div>
   </div>
 </template>
