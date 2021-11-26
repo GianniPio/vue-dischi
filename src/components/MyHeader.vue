@@ -1,6 +1,8 @@
 <template>
-  <div>
-    ciao
+  <div id="header">
+    <div id="icon">
+        <i class="fab fa-spotify"></i>
+    </div>
   </div>
 </template>
 
@@ -12,5 +14,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+    #header {
+        background-color: #2e3a46;
+
+        #icon {
+            color: #1ed760;
+            font-size: 40px;
+            padding: 10px 20px;
+            
+            i {
+                cursor: pointer;
+            }
+        }
+    }
 
 </style>
