@@ -1,10 +1,10 @@
 <template>
-  <div id="header">
+  <header>
       <!-- div si riferimento per l'icona -->
     <div id="icon">
         <i class="fab fa-spotify"></i> <!--Icona di spotify-->
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-    #header {
+    header {
         background-color: #2e3a46;
 
         #icon {
