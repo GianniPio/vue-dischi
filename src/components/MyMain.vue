@@ -1,7 +1,11 @@
 <template>
   <main>
 
-    <div id="container">
+    <div v-if="listadischi.length == 0">
+      <Load/>
+    </div>
+
+    <div v-else id="container">
       <MyDiscs v-for="disco, i in listadischi" :key="i" :details="disco"/>
       
     </div>
@@ -11,13 +15,16 @@
 
 <script>
 
+import Load from "@/components/Load.vue";
 import MyDiscs from "@/components/MyDiscs.vue";
 import axios from "axios";
+
 
 export default {
   name: "MyMain",
   components: {
-    MyDiscs
+    MyDiscs,
+    Load,
   },
   data() {
     return {
