@@ -1,12 +1,15 @@
 <template>
   <main>
+    <div>
+      <Search/>
+    </div>
 
     <div v-if="listadischi.length == 0">
       <Load/>
     </div>
 
     <div v-else id="container">
-      <MyDiscs v-for="disco, i in listadischi" :key="i" :details="disco"/>
+      <MyDisc v-for="disco, i in listadischi" :key="i" :details="disco"/>
       
     </div>
       
@@ -16,15 +19,17 @@
 <script>
 
 import Load from "@/components/Load.vue";
-import MyDiscs from "@/components/MyDiscs.vue";
+import MyDisc from "@/components/MyDisc.vue";
 import axios from "axios";
+import Search from "@/components/Search.vue";
 
 
 export default {
   name: "MyMain",
   components: {
-    MyDiscs,
+    MyDisc,
     Load,
+    Search,
   },
   data() {
     return {
@@ -48,7 +53,6 @@ export default {
 
     main {
         background-color: #1e2d3b;
-        height: 100%;
 
         #container {
           width: 70%;
