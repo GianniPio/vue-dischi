@@ -35,6 +35,11 @@ export default {
         margin: 5px 5px 20px 5px;
         text-align: center;
 
+        &:hover {
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
         img {
             width: 100%;
             object-fit: contain;
