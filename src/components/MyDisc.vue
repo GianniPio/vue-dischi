@@ -1,10 +1,10 @@
 <template>
     <div class="disc">
         <div class="immagine">
-           <img :src="details.poster" :alt="details.title"> 
+           <img :src="details.poster" :alt="details.title"> <!--Details == disco -->
         </div>
       <div class="text">
-        <p>{{details.title.toUpperCase()}}</p> <!--Per stampare i titoli in maiscuolo-->
+        <p>{{details.title.toUpperCase()}}</p> <!--Per stampare i titoli in maiscuolo--> 
         <span>{{details.author}}</span>
         <span>{{details.year}}</span>
       </div>
@@ -16,8 +16,8 @@
 <script>
 export default {
   name: "MyDiscs",
-  props: {
-      details: Object,
+  props: { //serve per passare i dati al padre
+      details: Object, //details si aspetta un oggetto
   }
  
 };

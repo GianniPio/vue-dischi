@@ -1,7 +1,7 @@
 <template>
   <div id="selected">
     <form action="">
-        <select name="genre" id="" @change="$emit('changeSelect',$event)">
+        <select name="genre" id="" @change="$emit('changeSelect', $event)"> <!-- al cambio della selezione, il padre tramite changeSelect, richiama un metodo e passa il valore come evento -->
             <option :value="'all'">Tutti i generi</option>
             <option :value="'rock'">Rock</option>
             <option :value="'pop'">Pop</option>
