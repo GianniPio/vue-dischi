@@ -1,7 +1,7 @@
 <template>
   <main>
     <div>
-      <Search/>
+      <Search @changeSelect="changeGen"/>
     </div>
 
     <div v-if="listadischi.length == 0">
@@ -35,14 +35,33 @@ export default {
     return {
       apiURL: "https://flynn.boolean.careers/exercises/api/array/music",
       listadischi: [],
+      optionSelect:"all",
     }
   },
   created() {
     this.getDischi();
   },
+
+
   methods: {
     getDischi() {
       axios.get(this.apiURL).then((result) => {this.listadischi = result.data.response;})
+    },
+
+    changeGen(event) {
+      this.optionSelect = event.target.value
+    }
+  },
+
+  computed: {
+    filtraDischi() {
+      if(this.optionSelect === "all") {
+        return this.listadischi
+      }
+      return this.listadischi.filter((elem) =>{
+        return elem.genre.toLoweerCase().includes(this.optionSelect.toLowerCase())
+      }) 
+       
     }
   }
 };
