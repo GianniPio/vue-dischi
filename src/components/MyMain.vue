@@ -70,6 +70,7 @@ export default {
     main {
         background-color: #1e2d3b;
         height: 100%;
+        padding-top: 20px;
 
         #container {
           width: 70%;

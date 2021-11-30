@@ -46,7 +46,7 @@ export default {
 
       #selected {
       width: 100%;
-      padding: 25% 0;
+      padding: 2% 0;
      
     
       form {
