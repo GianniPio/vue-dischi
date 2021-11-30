@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MyHeader/>
-    <MyMain/>
+    <MyHeader @changeSelect="changeGen"/>
+    <MyMain :selectedGen="optionSelect"/>
   </div>
 </template>
 
@@ -15,6 +15,20 @@ export default {
     MyHeader,
     MyMain,
   },
+
+  data() {
+    return {
+      optionSelect:"", // elemento dell'option
+    }
+  },
+
+  methods: {
+     changeGen(event) {
+      this.optionSelect = event.target.value
+    }
+  }
+
+
 };
 </script>
 
