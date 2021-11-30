@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MyHeader @changeSelect="changeGen"/>
-    <MyMain :selectedGen="optionSelect"/>
+    <MyHeader @changeSelect="changeGen"/> <!-- attiva la funzione changeGen -->
+    <MyMain :selectedGen="optionSelect"/> <!-- prende la variabile optionSelect e la trasferisce nel main tramite la prop selectedGen -->
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   },
 
   methods: {
-     changeGen(event) {
+     changeGen(event) { // una volta attivata, prende il valore del selected e lo salva in optionSelect
       this.optionSelect = event.target.value
     }
   }

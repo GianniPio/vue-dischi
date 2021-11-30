@@ -30,7 +30,7 @@ export default {
     Load
   },
   props: {
-    selectedGen: String,
+    selectedGen: String, // la prop deve ricevere una stringa, che sarebbe la variabile optionSelect che deriva dall'Header
   },
 
   data() {
@@ -53,10 +53,10 @@ export default {
   computed: {
     filtraDischi() {
       if(this.selectedGen === "all") {
-        return this.listadischi  // se 'loption è all, stampa l'intera lista
+        return this.listadischi  // se l'option è all, stampa l'intera lista
       }
       return this.listadischi.filter((elem) =>{
-        return elem.genre.toLowerCase().includes(this.selectedGen.toLowerCase()) // altrimenti stampa la lista che contiene l'option
+        return elem.genre.toLowerCase().includes(this.selectedGen.toLowerCase()) // altrimenti stampa la lista filtrata che contiene l'option
       }) 
        
     }
