@@ -29,39 +29,40 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-    header {
-      background-color: #2e3a46;
-      display: flex;
-      justify-content: space-between;
+header {
+  background-color: #2e3a46;
+  display: flex;
+  justify-content: space-between;
 
-        #icon {
-        color: #1ed760;
-        font-size: 40px;
-        padding: 10px 20px;
-        
-        i {
-          cursor: pointer;
-        }
-      }
-
-      #selected {
-      width: 100%;
-      padding: 2% 0;
-     
+  #icon {
+  color: #1ed760;
+  font-size: 40px;
+  padding: 10px 20px;
     
-      form {
-        text-align: right;
-        margin-right: 25px;
-
-      select {
-        padding: 5px;
-        border: 2px solid cadetblue;
-        font-size: 15px;
-      }
+    i {
+      cursor: pointer;
     }
- }
 
+  }
 
+  #selected {
+  width: 100%;
+  padding: 2% 0;
+  
+  
+    form {
+      text-align: right;
+      margin-right: 25px;
     }
+    
+    select {
+    padding: 5px;
+    border: 2px solid cadetblue;
+    font-size: 15px;
+    }
+
+  }
+}
+ 
 
 </style>
